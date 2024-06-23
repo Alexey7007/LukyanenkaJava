@@ -17,5 +17,15 @@ public class AnimalApp {
         zebraLolli.run(100);
         zebraLolli.swim(10);
 
+        Cat[] cats = {new Cat("Марсик"), new Cat("Катя"), new Cat("Мурка")};
+        Tarelka tarelka = new Tarelka(100);
+
+        for (Cat cat:cats){
+            cat.eat(tarelka);
+            System.out.println(cat.getName() + " сытость: " + cat.isSitost());
+        }
+
+        tarelka.plusFood(25);
+        System.out.println("В тарелке еды осталось: " + tarelka.getFood());
     }
 }
