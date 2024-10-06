@@ -1,4 +1,4 @@
-package course_aqa.L5;
+package course_aqa.L5.task_1;
 
 public class AnimalApp {
     public static void main(String[] args) {

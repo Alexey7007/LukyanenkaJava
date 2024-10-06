@@ -1,4 +1,4 @@
-package course_aqa.L5;
+package course_aqa.L5.task_1;
 
 public class Animal {
     static int totalAnimals = 0;
