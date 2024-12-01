@@ -2,9 +2,12 @@ package course_aqa.L5.task_1;
 
 public class Animal {
     static int totalAnimals = 0;
-    private String name;
-    public Animal(){
+    private final String name;
+
+    public String getName() {
+        return name;
     }
+
     public Animal(String name){
         this.name = name;
         totalAnimals++;

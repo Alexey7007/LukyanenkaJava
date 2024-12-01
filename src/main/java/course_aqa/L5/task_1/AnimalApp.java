@@ -22,7 +22,7 @@ public class AnimalApp {
 
         for (Cat cat:cats){
             cat.eat(tarelka);
-            System.out.println(cat.getName() + " сытость: " + cat.isSitost());
+            System.out.println(cat.getName() + " сытость: " + cat.isSatiety());
         }
 
         tarelka.plusFood(25);
