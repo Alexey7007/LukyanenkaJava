@@ -1,6 +1,10 @@
 package course_aqa.L5.task_2;
 
-public class Rectangle implements Shape {
+import course_aqa.L5.task_2.Interface.AreaCalculation;
+import course_aqa.L5.task_2.Interface.Colors;
+import course_aqa.L5.task_2.Interface.PerimetrCalculation;
+
+public class Rectangle implements AreaCalculation, PerimetrCalculation, Colors {
     private double width;
     private double height;
     private String fillColor;
@@ -14,12 +18,12 @@ public class Rectangle implements Shape {
     }
 
     @Override
-    public double area() {
+    public double ResultCalculationArea() {
         return width * height;
     }
 
     @Override
-    public double perimetr() {
+    public double ResultCalculationPerimetr() {
         return width + width + height + height;
     }
 

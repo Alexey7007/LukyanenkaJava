@@ -1,29 +1,33 @@
 package course_aqa.L5.task_2;
 
-public class Triangle implements Shape{
-    private double A;
-    private double B;
-    private double C;
+import course_aqa.L5.task_2.Interface.AreaCalculation;
+import course_aqa.L5.task_2.Interface.Colors;
+import course_aqa.L5.task_2.Interface.PerimetrCalculation;
+
+public class Triangle implements AreaCalculation, PerimetrCalculation, Colors {
+    private double sideA;
+    private double sideB;
+    private double sideC;
     private String fillColor;
     private String borderColor;
 
-    public Triangle(double A, double B, double C, String fillColor, String borderColor){
-        this.A = A;
-        this.B = B;
-        this.C = C;
+    public Triangle(double sideA, double sideB, double sideC, String fillColor, String borderColor){
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
 
     @Override
-    public double area() {
-        double s = (A + B + C) / 2;
-        return Math.sqrt(s * (s - A) * (s - B) * (s - C));
+    public double ResultCalculationArea() {
+        double s = (sideA + sideB + sideC) / 2;
+        return Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
     }
 
     @Override
-    public double perimetr() {
-        return A + B + C;
+    public double ResultCalculationPerimetr() {
+        return sideA + sideB + sideC;
     }
 
     @Override

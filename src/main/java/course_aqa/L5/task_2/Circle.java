@@ -1,6 +1,10 @@
 package course_aqa.L5.task_2;
 
-public class Circle implements Shape{
+import course_aqa.L5.task_2.Interface.AreaCalculation;
+import course_aqa.L5.task_2.Interface.Colors;
+import course_aqa.L5.task_2.Interface.PerimetrCalculation;
+
+public class Circle implements AreaCalculation, PerimetrCalculation, Colors {
 
     private double radius;
     private String fillColor;
@@ -13,12 +17,12 @@ public class Circle implements Shape{
     }
 
     @Override
-    public double area() {
+    public double ResultCalculationArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public double perimetr() {
+    public double ResultCalculationPerimetr() {
         return 2 * Math.PI * radius;
     }
 
